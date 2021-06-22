@@ -1,0 +1,43 @@
+{
+  "name": "simple-docker-webhook",
+  "version": "1.0.0",
+  "description": "A simple webhook for docker",
+  "main": "lib/Main.js",
+  "types": "lib/Main.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tolfix/simple-docker-webhook.git"
+  },
+  "keywords": [
+    "webhook",
+    "docker webhook",
+    "docker",
+    "express"
+  ],
+  "author": "Tolfx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tolfix/simple-docker-webhook/issues"
+  },
+  "homepage": "https://github.com/Tolfix/simple-docker-webhook#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}

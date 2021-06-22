@@ -2,6 +2,7 @@ import Express from "express"
 import { Application } from "express";
 import event from "events";
 import Options from "./interfaces/Options";
+import Body from "./interfaces/Body";
 
 
 /**
@@ -53,7 +54,7 @@ export default class SimpleDockerWebhook<P extends Application | number>
     /**
      * @description
      */
-    public on(cb: (res: any) => void)
+    public on(cb: (res: Body) => void)
     {
         this.Event.on("listen", (resp) => {
             cb(resp)

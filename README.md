@@ -27,7 +27,7 @@ webhook.on(response => {
 const SimpleWebhook = require("simple-docker-webhook");
 
 const Port = 3000;
-const webhook = new SimpleWebhook(Port);
+const webhook = new SimpleWebhook.default(Port);
 
 webhook.on(response => {
     // Do something
@@ -61,7 +61,7 @@ const Express = require("express");
 
 const Port = 3000;
 const app = Express();
-const webhook = new SimpleWebhook(app);
+const webhook = new SimpleWebhook.default(app);
 
 webhook.on(response => {
     // Do something
